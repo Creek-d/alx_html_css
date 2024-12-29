@@ -1,0 +1,422 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    background-image: url('Object.png'); /* Replace with your image URL */ 
+    width: 100vw;
+    height: 100vh; /* Restrict height to viewport height */
+    display: flex;
+    background-size: cover; /* Ensure image covers the container */
+
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden; /* Prevent image overflow */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    align-items: center; /* Align items vertically */
+   
+}
+
+.header > div {
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    padding: 5px 10px; /* Add some padding */
+    flex: 1; /* Makes items flexible */
+}
+
+.logo {
+    flex: 0; /* Prevents the logo from stretching */
+    width: 100px;
+    background-color: transparent; /* No background for the logo */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+  
+}
+
+.nav-link {
+    flex: 1; /* Evenly distribute space among links */
+    font-size: 16px;
+    line-height: 50px; /* Adjust line height for better spacing */
+    text-transform: uppercase;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+}
+
+.nav-link a:hover {
+    color: #ffa500;
+}
+.first-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+.first-section .intro {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.first-section h1 {
+    font-size: 2rem;
+    color: #fffbfb;
+    margin-bottom: 30px;
+}
+.first-section span {
+    
+    margin-right: 50px;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+.first-section button {
+    padding: 10px 20px;
+    background-color: #c36fff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.first-section button:hover {
+    background-color: #0056b3;
+}
+/* Profile Cards */
+.first-section .profiles {
+    text-align: center;
+    margin-top: 100px;
+}
+.first-section .profiles h2 {
+    color: #c5ccd6;
+}
+
+.first-section .profile-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+.first-section .profile-card {
+    flex: 1 1 calc(25% - 15px);
+   
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    
+}
+.first-section .profile-card img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.first-section .profile-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.first-section .profile-card p {
+    font-size: 0.9rem;
+    color: #ffffff;
+
+}        
+ /* Second Section */
+ .second-section {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    background-color: #c472ff ;
+}
+.second-section .image-container {
+    margin-left: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.second-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.second-section .testimonial {
+    flex: 1;
+    text-align: left;
+}
+.second-section blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.second-section h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.second-section p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+.popular-tutorials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.popular-tutorials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.popular-tutorials .highlight {
+    color: #7a54d1;
+}
+
+.tutorials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    overflow-x: auto; /* Enables scrolling if the content overflows */
+    padding: 0 20px;
+}
+
+.tutorial-card {
+    background: #fff;
+    margin: 0;
+    
+    width: 300px;
+    padding: 5px;
+    text-align: left;
+    flex-shrink: 0; /* Ensures all cards stay the same size even in smaller viewports */
+
+}
+
+.thumbnail {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    display: block;
+}
+
+
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.play-button {
+    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            color: #7a54d1;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    color: #fbc02d;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+        /* Section 5 specific styling */
+        #section-5 {
+            background-color: #12192C; /* Dark background color */
+            color: #FFFFFF; /* Default text color */
+            text-align: center; /* Center text and elements */
+            padding: 40px 20px; /* Spacing inside the section */
+        }
+
+        /* Heading styling for Section 5 */
+        #section-5 h2 {
+            color: #A020F0; /* Purple color for heading */
+            font-size: 2em; /* Larger heading font */
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+
+        /* Card container styling for Section 5 */
+        #section-5 .card {
+            display: inline-block; /* Inline blocks for grid-like layout */
+            width: 20%; /* Set width for each card */
+            margin: 20px; /* Spacing between cards */
+            text-align: center; /* Center align card content */
+        }
+
+        /* Icon styling for Section 5 */
+        #section-5 .card img {
+            width: 50px; /* Icon size */
+            margin-bottom: 10px; /* Spacing below the icon */
+        }
+
+        /* Card title styling for Section 5 */
+        #section-5 .card h3 {
+            font-size: 1.2em; /* Subtitle size */
+            margin-bottom: 10px; /* Spacing below the title */
+        }
+
+        /* Card description styling for Section 5 */
+        #section-5 .card p {
+            font-size: 0.9em; /* Smaller paragraph font size */
+            color: #CCCCCC; /* Light gray text for description */
+        }
+
+        /* Button styling for Section 5 */
+        #section-5 button {
+            display: inline-block; /* Inline block button */
+            background-color: #A020F0; /* Purple background */
+            color: #FFFFFF; /* White text */
+            font-size: 1em; /* Font size */
+            padding: 10px 20px; /* Button padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            margin-top: 20px; /* Spacing above button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        /* Button hover effect for Section 5 */
+        #section-5 button:hover {
+            background-color: #8A1ACC; /* Darker purple on hover */
+        }
+        /* Section 6 specific styling */
+        #section-6 {
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        #section-6 h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        #section-6 > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #section-6 > div > div {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #section-6 > div > div h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        #section-6 > div > div div {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            #section-6 > div {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
+        /* Footer specific styles */
+        #footer {
+            background-color: #0A1128; /* Dark blue background */
+            color: #ffffff; /* White text */
+            text-align: center; /* Center content horizontally */
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #footer .logo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 500px;
+            margin-bottom: 10px;
+        }
+
+        #footer img {
+            height: 25px; /* Adjust size of the logo */
+        }
+
+        #footer .social-icons i {
+            color: #ffffff; /* Icon color */
+            font-size: 24px; /* Adjust size of icons */
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        #footer .social-icons i:hover {
+            color: #00aaff; /* Hover color */
+        }
+
+        #footer p {
+            font-size: 14px; /* Smaller font for the copyright text */
+            margin: 0;
+        }
+
+
+        @media (max-width: 768px) {
+            .background-container {
+                height: 70vh; /* Adjust height for smaller screens */
+            }}
